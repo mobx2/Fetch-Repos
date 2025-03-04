@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --main-radius: 5px;
+  --main-transition: 0.3s ease;
+  --primary-color: #f44336;
+  --secondary-color: #bb352c;
+  --background-color: #f6f6f6;
+  --text-color: white;
+  --container-width: 800px;
+}
+
+/* Body */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Main Container */
+.repos-container {
+  width: var(--container-width);
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: var(--main-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Get Repos Section */
+.get-repos {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #eee;
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
+}
+
+.get-repos input[type="text"] {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  font-size: 1.25rem;
+  height: 54px;
+  border-radius: var(--main-radius);
+}
+
+.get-repos input[type="text"]:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.get-repos .get-button {
+  width: 140px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--main-radius);
+  transition: var(--main-transition);
+}
+
+.get-repos .get-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Show Data Section */
+.show-data {
+  padding: 20px;
+  background-color: #e0e0e0;
+  border-radius: 0 0 var(--main-radius) var(--main-radius);
+}
+
+.repo-box {
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--main-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repo-box:last-child {
+  margin-bottom: 0;
+}
+
+.btns-div {
+  display: flex;
+  gap: 15px;
+}
+
+.repo-link,
+.stars-count {
+  padding: 7.5px 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  border-radius: var(--main-radius);
+  transition: var(--main-transition);
+}
+
+.repo-link:hover,
+.stars-count:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
